@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG's Birthday</title>
+    <link rel="icon" type="image/png" href="./images/gg-title.png">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="box">
+        <form>
+        <h1 style="font-style: oblique"><p style="color:blue">Gayathri Chan💚</p>tanjoubi omedetou<span style="font-family: Segoe Script"s>(Happy Birthday)</span></h1>
+        <h3 style="color:rgb(100, 40, 40)"><i>Please enter the 9 letter password Gayathri ma</i></h3>
+        <form>
+          <p>
+            <input onchange=enableSubmit() type="password" value="" placeholder="Enter Password" id="p" class="password">
+          </p>
+          <p style="display: none; color: red" id="password-validation">Loosu paiyale Gayathri mattum dha allowed mooditu vera velaiya paru</p>
+          <button type="submit" onclick=passwordInput(e) id="password-button">Submit</button>
+        </form>
+    </div>
+    <div >
+        <img id="page-1" class="img1" style="width: 100%; display: none;" src="./images/img2.png" />
+        <h1 id="page-2" style="text-align:center; font-family:Bradley Hand, cursive; display: none;">Konnichiwa Hippo💚</h1>
+        <p id="page-3" style="text-align:center; font-size:large; font-family:Bradley Hand, cursive; display: none;"><br><br>
+            Wishing you a very happiest birthday! in your life, I hope so...<br>
+            Unkita Konnichiwa sonna serupu pinjidumnu solluva but erundhalum parvala ha ha<br><br>
+            
+            To me you are a coolest person, A hard worker who never satisfy with things the way it was.<br> you always push your self more harder to attain your goals.<br>
+            Giving importance to your family and yours friends, even when you are at your lowest<br>
+            you are a kind one, only a strongest can be kind to everyone, as I always told you;<br><br>
+
+            You are sweet, funny, kind and a pretty one, so never lower yourself in front of other people<br><br>
+
+            If you face any hard times in the future, never forget that you have good family who can support you at any point of time, you are independent,<br>
+            you can handle things on your own like Mitsuri (Love Hashira). you are strong.<br><br>
+
+            As I always say, you are the person who cleared Neet in your first attempt, while most of the people struggle to clear it in a single attempt<br>
+            you have participated many competitions won many prizes with all your efforts, even the whole class is against you because of some shitty rumors,<br>
+            you have bravely faced that situation and forgive them, Damn! you are super.<br>
+            Founder of a company, distinction student, with super grades and profile,<br>
+            A strong girl who studied in abroad without anyone's help and also never express your struggles which you have faced to your family,<br>
+            helping others, doing a very good job, competing with other person in work, damn look at you are the coolset.
+
+        </p>
+        <img id="page-4" class="img1" style="width: 30%; display: none;" src="./images/img1.jpg" />
+        <h1 id="page-5" style="text-align:center; font-family:Bradley Hand, cursive; display: none;">Once again happiest birthday to you!...💚</h1>
+        <h2 id="page-6" style="text-align:center; font-family:Bradley Hand, cursive; display: none;">sorry for hurting hurting your dad and you, ennala dhan unaku thitu birthday adhuvuma so sorry ma<br> promise ah nee enna paka varuvanu theriyadhu ennala dha romba sorry mannichidu <br>na gift gate pakathula vechidalam nee eduthupanu nanacha so sorry</h2>
+    </div>
+    <script>
+        document.getElementById("password-button").addEventListener("click", 
+        (e)=>{
+            e.preventDefault()
+            const passwordInput = document.querySelector("input").value;
+            if(passwordInput.length > 0){
+                document.getElementById("password-button").style.display = "block";
+            }
+            if(passwordInput.toLowerCase() === "ballshair"){
+                const passwordBox = document.getElementById("box");
+                passwordBox.style.display = "none";
+                pageOne()
+            }
+            else{
+                document.getElementById("password-validation").style.display = "block";
+            }
+        });
+
+        const pageOne =() => {
+            document.getElementById("page-1").style.display = "block";
+            document.getElementById("page-2").style.display = "block";
+            document.getElementById("page-3").style.display = "block";
+            document.getElementById("page-4").style.display = "block";
+            document.getElementById("page-5").style.display = "block";
+            document.getElementById("page-6").style.display = "block";
+        }
+
+    </script>
+</body>
+</html>
